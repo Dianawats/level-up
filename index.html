@@ -19,7 +19,7 @@
 
                 </div>
                 <form>
-                    <div class = "form-element-group">
+                    <div class = "form-container">
                         <div class = "form-element child-element">
                             <label>First name (required)</label>
                             <input type = "text" name = "first-name" placeholder = "First name">
@@ -32,8 +32,20 @@
                         </div>
                     </div>
                         <div class = "form-element">
-                            <label>Enter your phone number (required)</label>
-                            <input type="tel" name="tel" placeholder="Phone number">
+                            <label>Enter your phone number (required)</label> 
+                        </div>
+
+                        <div class="form-container phone-group">
+                            <div class="form-element country-code">
+                                <select name="country-code" class="select-element">
+                                    <option value="country-A">+256</option>
+                                    <option value="country-B">+254</option>
+                                    <option value="country-C">+255</option>
+                                    <option value="country-D">+250</option>
+                                </select>
+                            </div>
+                        <div class = "form-element">
+                            <input type="number" name="tel" placeholder="Phone number">
                         </div>
 
                         <div class = "form-element">
@@ -52,13 +64,15 @@
 
                         <div class = "form-element">
                             <button type = "submit" name = "submit" class = "main-section">Sign up</button>
+                            
                         </div>
-                        <!-- <div class ="agree-content">By clicking "Sign up", you agree to Uber's
-                             <a href="Terms.html">Terms of use</a>
-                             and acknowledge you have read the 
-                             <a href="policy.html">Privacy Policy</a>
-                            </div> -->
-
+                        <div class="form-element Conds">
+                            By clicking "Sign Up", you agree to Uber's
+                            <a class="text-primary" href="#">Terms of Use</a> and acknowledge you have
+                            <br> read the
+                            <a class="text-primary" href="#">Privacy Policy</a>.
+                        </div>
+                        
                 </form>
                 
 
