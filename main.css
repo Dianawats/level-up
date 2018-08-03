@@ -10,6 +10,11 @@ body{
 main-section{
     display: flex;
     justify-content: center;
+  
+}
+
+.text-primary{
+  color: #096b70
 }
 
 section#SignUp-section{
@@ -27,7 +32,6 @@ section#SignUp-section{
     margin: 0 auto;
     color: #ffffff;
     
-
 }
 
 .header > h3{
@@ -43,22 +47,31 @@ section#SignUp-section{
     margin-bottom: 40px;
 }
 
-.form-element-group{
+.form-container{
     display: flex;
-    justify-content: space-between;
 }
 
-.form-element-group > .form-element:first-child {
+.form-container > .form-element:first-child {
     margin-right: 10px;
   }
 
-.form-element-group > .child-element {
+.form-container > .child-element {
     margin: 0;
   }
 
+.phone-group{
+  margin-bottom: 0 !important;
+  margin-top: -19px;
+}
+
+.phone-group .country-code{
+  flex-basis: 30%;
+}
+
 .form-element,
-.form-element-group {
+.form-container {
   margin-bottom: 24px;
+  width: 100%;
 }
 
 .form-element > label {
@@ -82,28 +95,44 @@ section#SignUp-section{
     section#SignUp-section {
       padding: 2rem 0;
     }
-    .form-element-group {
+
+    .text-group {
       flex-direction: column;
     }
+
+    .phone-group .country-code {
+      flex-basis: 40%;
+    }
+  
+   }
+  
+  .form-element > select {
+    padding: 8px 18px;
+    font-size: 17px;
+    border: 1px solid #ddd;
+    width: 100%;
+    height: 50px;
   }
   
+.form-element > select:focus {
+    outline: none;
+    border-color: #096b70;
+  }
 
 .form-element > input:focus {
     outline: none;
     border-color: #096b70;
   } 
 
+  .Conds {
+    font-size: 13px;
+  }
+
   a.promo {
     color: #096b70;
     text-decoration: none;
     font-size: 14px;
   }
-/* 
-  .agree-content{
-    display: flex;
-    justify-content: center;
-    margin: 0;
-  } */
 
 button.main-section {
     background: #096b70;
@@ -119,6 +148,8 @@ button.main-section {
   }
 
 
+
+ 
 
   
 
