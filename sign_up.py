@@ -1,4 +1,7 @@
 
+import re
+
+
 class SignUp:
 
     """Sign up class with validate email""" 
@@ -17,9 +20,32 @@ class SignUp:
         fullName = "first_name" + " " + "last_name"
         print(fullName)
 
-    def submit(self):
-        pass
-        # e.g send the data to the db
+
+class CombineForm(SignUp):
+
+    def __init__(self, first_name, last_name, email_address, 
+                 phone_number, country_code):
+        super().__init__(self, first_name, last_name, email_address, 
+                         phone_number, country_code)
+
+    def combine_name(self):
+        full_name = '{}  {}'.format(self.first_name, self.last_name)
+        print(full_name)
+        return full_name
+
+    def combine_phone_number(self):
+        full_number = '{}{}'.format(self.country_code, self.phone_number)
+        print(full_number)
+        return full_number
+
+    def combine_all_data_and_save_to_file(self):
+        all_data = '{} {} {}{} {}'.format(self.first_name, self.last_name, self.country_code, self.phone_number, self.email_address)
+        save_data = all_data + '\n'
+        data = open('data.txt', 'a')
+        data.write(save_data)
+        data.close()
+        print(all_data)
+        return all_data
 
     @staticmethod
     def validate_email(email):
@@ -40,4 +66,9 @@ class SignUp:
 
     
 
-# SignUp.combine_phone_number()
+    SignUp.combine_phone_number()
+    name.combine_phone_number()
+    name = CombineData('diana', 'naki', '+256', '75875858', 'diand@gmail.com')
+
+    name.combine_name()
+    name.combine_all_data_and_save_to_file(
