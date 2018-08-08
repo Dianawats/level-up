@@ -2,11 +2,13 @@
 class SignUp:
 
     """Sign up class with validate email""" 
-    def __init__(self, first_name, last_name, email_address):
+    def __init__(self, first_name, last_name, email_address, 
+                 phone_number, country_code):
         self.first_name = first_name
         self.last_name = last_name
         self.email_address = SignUp.validate_email(email_address)
-        self.email_address = []
+        self.phone_number = SignUp.validate_number(phone_number)
+        self.country_code = country_code
         
     """Combines first and lastname into a single name"""
     def combined_name(self):
@@ -21,5 +23,15 @@ class SignUp:
 
     @staticmethod
     def validate_email(email):
-        # e.g check if the email is in valid format
-        return email
+        EMAIL_REGEX = re.compile(r"^[A-Za-z0-9_-]+@[A-Za-z0-9_-]+\.[a-zA-Z]*$")
+        if not EMAIL_REGEX.match(email):
+            print('invalid email')
+            raise ValueError("Wrong email format")
+        else:
+            print('valid email')
+            print(email)
+            return email
+
+    
+
+# SignUp.combine_phone_number()
