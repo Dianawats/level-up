@@ -32,6 +32,12 @@ class SignUp:
             print(email)
             return email
 
+    @staticmethod
+    def combine_phone_number(self):
+        whole_number = '{}{}'.format(self.country_code, self.phone_number)
+        print(whole_number)
+        return whole_number
+
     
 
 # SignUp.combine_phone_number()
