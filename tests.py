@@ -16,6 +16,10 @@ class TestSignup(unittest.TestCase):
         with self.assertRaises(ValueError):
             Register.validate_email('diana@gmail.com')
 
+    def test_validate_email_returns_phone_number(self):
+        phone = Register.validate_phone('785730287')
+        self.assertEqual(phone, '785730287')
+
     
 if __name__ == ' __main__':
     unittest.main()
