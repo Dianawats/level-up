@@ -71,4 +71,4 @@ class CombineData(Register):
 name = CombineData('Diana', 'Wats', 'diana@gmail.com', '785730287', '+256')
 name.combine_phone_number()
 name.combine_name()
-name.combine_all_data_and_save_to_file()
+name.combine_all_data_and_save_it_to_file()
