@@ -1,2 +1,19 @@
+language: python
+python:
+  - "3.6"
+# command to install dependencies
+install:
+  - "pip install -r requirements.txt"
 
-repo_token: obSdN2AuCrutVkZaUDMAFIFAZT4LyeC1a
+
+
+# command to run tests
+script:
+   - nosetests --with-coverage --cover-tests
+   - coverage report
+   - pytest test.py
+
+   
+
+after_success:
+  - coveralls
