@@ -6,17 +6,17 @@ class Register:
     """Sign up class with validate phone number and email""" 
 
     def __init__(self, first_name, last_name, 
-                 phone_number, email_address, password):
+                 phone_number, email, password):
         self.first_name = first_name
         self.last_name = last_name
         self.phone_number = phone_number
-        self.email_address = email_address
+        self.email = email
         self.password = password 
 
     def validate_email(self):
-        if not re.match(r"[^@.]+@[A-Za-z]+\.[a-z]+", self.email_address):
+        if not re.match(r"[^@.]+@[A-Za-z]+\.[a-z]+", self.email):
             return 'invalid email_address'
-        return self.email_address
+        return self.email
 
     # def __init__(self, first_name, last_name):
     #     self.fname = first_name
@@ -37,13 +37,17 @@ class Register:
     #     return {'message': 'valid data format', 'status_code': 200}
    
     def combine_name(self):
-        full_name = '{}  {}'.format(self.first_name, self.last_name)
-        print(full_name)
-        return full_name
+        if self.first_name.isalpha() and self.last_name.isalpha():
+            username = self.first_name + " " + self.last_name
+            return username
+        return 'Names must be alphabets'
+        # full_name = '{}  {}'.format(self.first_name, self.last_name)
+        # print(full_name)
+        # return full_name
 
     def validate_password(self):
         if not re.match(r"[A-Za-z0-9@#]", self.password):
             return 'invalid password'
-        elif len(self.password) < 8:
-            return 'Password should be atleast of eight xters long'
+        elif len(self.password) < 10:
+            return 'Password not exceed ten xters long'
         return 'Valid password entered'
