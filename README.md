@@ -1,7 +1,6 @@
 # level-up
 
 [![Build Status](https://travis-ci.org/Dianawats/level-up.svg?branch=develop)](https://travis-ci.org/Dianawats/level-up)
-
 [![Coverage Status](https://coveralls.io/repos/github/Dianawats/level-up/badge.svg?branch=level-up)](https://coveralls.io/github/Dianawats/level-up?level-up)
 
 ***Uber Sign up Form
